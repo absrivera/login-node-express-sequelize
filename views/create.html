@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sign Up</title>
+
+  <!-- <link rel="stylesheet" href="/css/custom.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .center {
+      margin: auto;
+      width: 30%;
+      border: none;
+      padding: 20px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+  <div class="center">
+    <form class="form-signin" action="" method="POST">
+
+      <h1 class="h3 mb-3 font-weight-normal">Please create account</h1>
+      <h6>Already have Account? <a href='/'>Login!</a></h6>
+      <br>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+        autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Enter password"
+        oninput="check(this, 'inputConfirmPassword')" required>
+      <label for="inputPassword" class="sr-only">Confirm Password</label>
+      <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password"
+        oninput="check(this, 'inputPassword')" required>
+
+      <br>
+      <label for="inputFirstName" class="sr-only">First Name</label>
+      <input name="firstname" type="text" id="inputFirstName" class="form-control" placeholder="Enter first Name"
+        required="" autofocus="">
+
+      <label for="inputLastName" class="sr-only">Last Name</label>
+      <input name="lastname" type="text" id="inputLastName" class="form-control" placeholder="Enter last Name"
+        required="" autofocus="">
+      <br>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+    </form>
+  </div>
+
+  <script language='javascript' type='text/javascript'>
+    function check(input, matchingId) {
+      if (input.value !== document.getElementById(matchingId).value) {
+        input.setCustomValidity('password must be matching');
+        document.getElementById(matchingId).setCustomValidity('Password must be matching');
+      } else {
+        input.setCustomValidity('');
+        document.getElementById(matchingId).setCustomValidity('');
+      }
+    }
+  </script>
+</body>
+
+</html>
